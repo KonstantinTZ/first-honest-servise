@@ -1,0 +1,199 @@
+@media (max-width:992px) {
+
+    .container {
+        max-width: 816px;
+    }
+
+
+    .header__container {
+        padding-top: 4px;
+        padding-left: 35px;
+        padding-right: 32px;
+        padding-bottom: 12px;
+    }
+
+
+    .header__img {
+        max-width: 93%;
+    }
+
+    .feedback {
+        margin-right: 24px;
+    }
+
+    .header__nav {
+        /* данные для бургер меню */
+        position: absolute;
+        /* из за того что абсолют и width 50% выезжает на половину экрана */
+        left: 0;
+        top: 138px;
+        width: 100%;
+        min-width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        /* что бы точно поверх всего контента */
+        padding: 50px;
+        padding-top: 0;
+        /* box-shadow: 0 0 5px #888; */
+        background-color: #fff;
+        overflow-y: auto;
+        /* что бы пункты меню помещались на сайт, когда он слишком мал по высоте. */
+        visibility: hidden;
+        transform: translateX(-120%);
+        /* выезд белого прямоугольника слева */
+        transition: visibility 0.3s linear, transform 0.3s linear;
+        /* visibility,tramsform,transition что бы меню красиво появлялось */
+    }
+
+    .header__nav--active {
+        /* при инициализации появляются эти стили */
+        visibility: visible;
+        transform: none;
+    }
+
+    .header__nav .nav__list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header__nav .nav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 29px;
+    }
+
+
+    .burger--active .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger--active .burger__line:first-child {
+        left: 25%;
+        top: 50%;
+        transform: rotate(45deg);
+        transform-origin: center;
+        transition: transform 0.3s linear, top 0.3s linear, left 0.3s linear;
+    }
+
+    .burger--active .burger__line:last-child {
+        bottom: auto;
+        left: 25%;
+        top: 50%;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        transition: transform 0.3s linear, top 0.3s linear, left 0.3s linear;
+    }
+
+
+
+    .burger {
+        position: relative;
+        display: block;
+        /* т.к. в style.css display none */
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger__line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        /*что бы выровнять все палочки горизонтально по центру  относительно данной кнопки*/
+        width: 20px;
+        height: 2px;
+        border-radius: inherit;
+        background-color: var(--color-black);
+    }
+
+    .burger__line:nth-child(1) {
+        /*:nth-child обращаемся к первой палочке и.т.д.  */
+        top: 13px;
+    }
+
+
+
+    .burger__line:nth-child(3) {
+        /*:nth-child обращаемся к третей палочке и.т.д.  */
+        bottom: 13px;
+    }
+
+    /* а 2 палочка посередине осталась */
+
+    .burger__line:nth-child(2) {
+        /*:nth-child обращаемся к первой палочке и.т.д.  */
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        /* такиим образом центрируем */
+        /* translateX(-50%) дублируем , т.к иначе оно отменяется из за  translateY(-50%) */
+    }
+
+    .stop-scroll {
+        overflow: hidden;
+        /* что бы когда появлется менюха слева нельзя было скролить, в js  примяняется прям к боди */
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    /* .container{
+        max-width: 351px;
+        padding: 0 14px;
+    } */
+
+    .header__img {
+        max-width: 83%;
+    }
+
+    .header__nav {
+        top: 134px;
+        padding-left: 36px;
+    }
+
+    .header__container {
+        padding-top: 2px;
+        padding-left: 35px;
+        padding-right: 29px;
+        padding-bottom: 12px;
+    }
+
+    .feedback {
+        flex-direction:column ;
+        align-items: flex-start;
+         /* данные для бургер меню */
+         position: absolute;
+         /* из за того что абсолют и width 50% выезжает на половину экрана */
+         left: 0;
+         top: 491px;
+         width: 100%;
+         min-width: 250px;
+         height: 100vh;
+         z-index: 1000;
+         /* что бы точно поверх всего контента */
+         padding-left: 37px;
+         /* box-shadow: 0 0 5px #888; */
+         background-color: #fff;
+         overflow-y: auto;
+         /* что бы пункты меню помещались на сайт, когда он слишком мал по высоте. */
+         visibility: hidden;
+         transform: translateX(-120%);
+         /* выезд белого прямоугольника слева */
+         transition: visibility 0.3s linear, transform 0.3s linear;
+         /* visibility,tramsform,transition что бы меню красиво появлялось */
+    }
+
+    .feedback__link{
+        padding-left: 0;
+    }
+
+    .feedback__button{
+        padding: 18px 84px;
+    }
+
+    .feedback--active {
+        /* при инициализации появляются эти стили */
+        visibility: visible;
+        transform: none;
+    }
+
+}
