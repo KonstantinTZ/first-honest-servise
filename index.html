@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Первый честный сервис</title>
+    <!-- Swipper JS lib-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 
-    <script src="js/main.js" defer></script>
+    
 </head>
 
 <body>
@@ -75,17 +77,148 @@
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
-              </button>
+            </button>
         </div>
     </header>
-    <!-- <main class="main">
+    <main class="main">
         <section class="hero">
             <div class="hero__container container">
-                
-                
+                <ul class="hero__list advantages-list list-reset">
+                    <li class="hero__item">
+                        <svg class="advantages-list__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" rx="16" fill="#B85FFF" />
+                            <path
+                                d="M16.783 15.826L25 14L33.217 15.826C33.4391 15.8754 33.6377 15.999 33.78 16.1764C33.9224 16.3538 34 16.5745 34 16.802V26.789C33.9999 27.7767 33.756 28.7492 33.2899 29.62C32.8238 30.4908 32.1499 31.2331 31.328 31.781L25 36L18.672 31.781C17.8503 31.2332 17.1765 30.4911 16.7103 29.6205C16.2442 28.7498 16.0002 27.7776 16 26.79V16.802C16 16.5745 16.0776 16.3538 16.22 16.1764C16.3623 15.999 16.5609 15.8754 16.783 15.826ZM26 23V18L21 25H24V30L29 23H26Z"
+                                fill="white" />
+                        </svg>
+                        <span class="advantages-list__descr">
+                            Честная&nbsp;бесплатная диагностика
+                        </span>
+                    </li>
+
+                    <li class="hero__item">
+                        <svg class="advantages-list__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" rx="16" fill="#B85FFF" />
+                            <path
+                                d="M25 35C19.477 35 15 30.523 15 25C15 19.477 19.477 15 25 15C30.523 15 35 19.477 35 25C35 30.523 30.523 35 25 35ZM22.5 22L20 24.5L25 29.5L30 24.5L27.5 22H22.5Z"
+                                fill="white" />
+                        </svg>
+                        <span class="advantages-list__descr">
+                            Оригинальные качественные запчасти
+                        </span>
+                    </li>
+
+                    <li class="hero__item">
+                        <svg class="advantages-list__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" rx="16" fill="#B85FFF" />
+                            <path
+                                d="M25.0001 36C23.4972 35.9999 22.0291 35.5483 20.786 34.7037C19.5429 33.8592 18.5822 32.6606 18.0284 31.2635C17.4747 29.8664 17.3534 28.3352 17.6804 26.8683C18.0073 25.4015 18.7674 24.0667 19.8621 23.037C21.2041 21.774 24.5001 19.5 24.0001 14.5C30.0001 18.5 33.0001 22.5 27.0001 28.5C28.0001 28.5 29.5001 28.5 32.0001 26.03C32.2701 26.803 32.5001 27.634 32.5001 28.5C32.5001 30.4891 31.7099 32.3968 30.3034 33.8033C28.8969 35.2098 26.9892 36 25.0001 36Z"
+                                fill="white" />
+                        </svg>
+                        <span class="advantages-list__descr">
+                            Гарантия до 1 года
+                        </span>
+                    </li>
+
+                    <li class="hero__item">
+                        <svg class="advantages-list__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="50" height="50" rx="16" fill="#B85FFF" />
+                            <path
+                                d="M25 35C19.477 35 15 30.523 15 25C15 19.477 19.477 15 25 15C30.523 15 35 19.477 35 25C35 30.523 30.523 35 25 35ZM25 20.757L20.757 25L25 29.243L29.243 25L25 20.757Z"
+                                fill="white" />
+                        </svg>
+                        <span class="advantages-list__descr">
+                            Фиксированные&nbsp;цены
+                        </span>
+                    </li>
+                </ul>
+
+                <!-- tamplate from lib -->
+                <div class="swiper hero-swiper" id="heroSwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide hero-slide">
+                            <div class="hero-slide__container">
+                                <div class="hero-slide__wrapper">
+                                    <h1 class="hero-slide__title">
+                                        Ремонт устройств качественно и
+                                        с&nbsp;гарантией
+                                    </h1>
+                                    <button class="hero-slide__button btn-reset secondary-button">
+                                        <span class="hero-slide__text">
+                                            Оставить заявку
+                                        </span>
+                                        <svg class="hero-slide__icon" width="20" height="20" viewBox="0 0 20 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.4766 9.1664L9.00658 4.6964L10.1849 3.51807L16.6666 9.99973L10.1849 16.4814L9.00658 15.3031L13.4766 10.8331H3.33325V9.1664H13.4766Z"
+                                                fill="#6244F5" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-slide">
+                            <div class="hero-slide__container">
+                                <div class="hero-slide__wrapper">
+                                    <h1 class="hero-slide__title">
+                                        Ремонт устройств качественно и
+                                        с&nbsp;гарантией
+                                    </h1>
+                                    <button class="hero-slide__button btn-reset secondary-button">
+                                        <span class="hero-slide__text">
+                                            Оставить заявку
+                                        </span>
+                                        <svg class="hero-slide__icon" width="20" height="20" viewBox="0 0 20 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.4766 9.1664L9.00658 4.6964L10.1849 3.51807L16.6666 9.99973L10.1849 16.4814L9.00658 15.3031L13.4766 10.8331H3.33325V9.1664H13.4766Z"
+                                                fill="#6244F5" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-slide">
+                            <div class="hero-slide__container">
+                                <div class="hero-slide__wrapper">
+                                    <h1 class="hero-slide__title">
+                                        Ремонт устройств качественно и
+                                        с&nbsp;гарантией
+                                    </h1>
+                                    <button class="hero-slide__button btn-reset secondary-button">
+                                        <span class="hero-slide__text">
+                                            Оставить заявку
+                                        </span>
+                                        <svg class="hero-slide__icon" width="20" height="20" viewBox="0 0 20 20"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.4766 9.1664L9.00658 4.6964L10.1849 3.51807L16.6666 9.99973L10.1849 16.4814L9.00658 15.3031L13.4766 10.8331H3.33325V9.1664H13.4766Z"
+                                                fill="#6244F5" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
             </div>
         </section>
-    </main> -->
+    </main>
+    <!-- Swipper JS lib -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

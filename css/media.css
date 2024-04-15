@@ -131,15 +131,94 @@
         /* что бы когда появлется менюха слева нельзя было скролить, в js  примяняется прям к боди */
     }
 
+    /* hero */
+
+    .hero {
+        padding-top: 12px;
+    }
+
+    .hero__container {
+        flex-direction: column-reverse;
+        gap: 32px;
+
+    }
+
+    .hero-swiper {
+        width: 100%;
+        height: 480px;
+    }
+
+
+    .hero-slide__container {
+        background-image: url('../img/hero-swipper-img-768.jpeg');
+        background-repeat: no-repeat;
+
+        border-radius: 24px;
+        padding: 67px 23px;
+        height: 100%;
+    }
+
+    .hero-slide__wrapper {
+        max-width: 510px;
+    }
+
+    .hero-slide__title {
+        font-family: Unbounded;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 54.56px;
+        text-align: left;
+
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 11px);
+
+
+    }
+
+    .hero__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: inherit;
+        gap: 20px;
+    }
+
+    .hero__item {
+        /* flex-basis: 383px; */
+        width: 383px;
+        height: 120px;
+        /* padding: 28px 25px; */
+    }
+
+    .hero__item:nth-child(1) {
+        order: 1;
+    }
+
+    .hero__item:nth-child(2) {
+        order: 3;
+    }
+
+    .hero__item:nth-child(3) {
+        order: 2;
+    }
+
+    .hero__item:nth-child(4) {
+        order: 4;
+    }
+
 }
 
 
 @media (max-width:768px) {
 
-    /* .container{
-        max-width: 351px;
-        padding: 0 14px;
-    } */
+    .container {
+
+        padding: 0 12px;
+    }
 
     .header__img {
         max-width: 83%;
@@ -158,35 +237,35 @@
     }
 
     .feedback {
-        flex-direction:column ;
+        flex-direction: column;
         align-items: flex-start;
-         /* данные для бургер меню */
-         position: absolute;
-         /* из за того что абсолют и width 50% выезжает на половину экрана */
-         left: 0;
-         top: 491px;
-         width: 100%;
-         min-width: 250px;
-         height: 100vh;
-         z-index: 1000;
-         /* что бы точно поверх всего контента */
-         padding-left: 37px;
-         /* box-shadow: 0 0 5px #888; */
-         background-color: #fff;
-         overflow-y: auto;
-         /* что бы пункты меню помещались на сайт, когда он слишком мал по высоте. */
-         visibility: hidden;
-         transform: translateX(-120%);
-         /* выезд белого прямоугольника слева */
-         transition: visibility 0.3s linear, transform 0.3s linear;
-         /* visibility,tramsform,transition что бы меню красиво появлялось */
+        /* данные для бургер меню */
+        position: absolute;
+        /* из за того что абсолют и width 50% выезжает на половину экрана */
+        left: 0;
+        top: 491px;
+        width: 100%;
+        min-width: 250px;
+        height: 100vh;
+        z-index: 1000;
+        /* что бы точно поверх всего контента */
+        padding-left: 37px;
+        /* box-shadow: 0 0 5px #888; */
+        background-color: #fff;
+        overflow-y: auto;
+        /* что бы пункты меню помещались на сайт, когда он слишком мал по высоте. */
+        visibility: hidden;
+        transform: translateX(-120%);
+        /* выезд белого прямоугольника слева */
+        transition: visibility 0.3s linear, transform 0.3s linear;
+        /* visibility,tramsform,transition что бы меню красиво появлялось */
     }
 
-    .feedback__link{
+    .feedback__link {
         padding-left: 0;
     }
 
-    .feedback__button{
+    .feedback__button {
         padding: 18px 84px;
     }
 
@@ -196,4 +275,157 @@
         transform: none;
     }
 
+    /* hero */
+
+    .hero__list{
+        gap: 16px;
+    }
+
+    .hero__item {
+        width: 100%;
+        height: 98px;
+        padding-right: 15px;
+    }
+
+    .advantages-list__descr {
+        font-family: Unbounded;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.84px;
+        text-align: left;
+
+    }
+
+
+    .hero__item:nth-child(2) {
+        order: 2;
+    }
+
+    .hero__item:nth-child(3) {
+        order: 3;
+    }
+
+
+
+    /* hero
+
+    .hero {
+        padding-top: 20px;
+    }
+
+    .hero__container {
+        gap: 22px;
+    }
+
+    .hero-swiper {
+        width: 100%;
+        height: 610px;
+    }
+
+    .hero-slide__container {
+        background-image: url('../img/hero-swipper-img-375.jpeg');
+        padding: 36px 24px;
+    }
+
+
+
+    .hero-slide__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 39.68px;
+        text-align: left;
+        margin-bottom: 41px;
+
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 31px);
+
+
+    }
+
+
+
+
+
+
+    .hero__list{
+        gap: 16px;
+    }
+
+    .hero__item {
+        width: 351px;
+        height: 98px;
+        padding-right: 15px;
+    }
+
+    .advantages-list__descr {
+        font-family: Unbounded;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.84px;
+        text-align: left;
+
+    }
+
+
+    .hero__item:nth-child(2) {
+        order: 2;
+    }
+
+    .hero__item:nth-child(3) {
+        order: 3;
+    } */
+
+
+
+
+}
+
+@media (max-width:480px) {
+        /* hero  */
+
+    .hero {
+        padding-top: 20px;
+    }
+
+    .hero__container {
+        gap: 22px;
+    }
+
+    .hero-swiper {
+        width: 100%;
+        height: 610px;
+    }
+
+    .hero-slide__container {
+        background-image: url('../img/hero-swipper-img-375.jpeg');
+        background-size:cover;
+        padding: 36px 24px;
+    }
+
+
+
+    .hero-slide__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 39.68px;
+        text-align: left;
+        margin-bottom: 41px;
+
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 31px);
+
+
+    }
 }

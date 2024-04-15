@@ -13,9 +13,9 @@ burgerBtn.addEventListener('click', function () {
     // document.body.classList.toggle('stop-scroll');
 })
 
-menuLinks.forEach(function(elem){
+menuLinks.forEach(function (elem) {
 
-    elem.addEventListener('click', function(){
+    elem.addEventListener('click', function () {
         burgerBtn.classList.remove('burger--active');
 
         menuNav.classList.remove('header__nav--active');
@@ -23,3 +23,43 @@ menuLinks.forEach(function(elem){
         feedbackNav.classList.remove('feedback--active');
     })
 })
+
+// swiperJs lib
+
+
+const heroSwiper = new Swiper('.hero-swiper', {
+
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 50,
+
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    
+
+    // breakpoints: {
+
+    //     768: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 50,
+    //     },
+
+    //     992: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 50,
+    //     },
+
+    //     1920: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 50,
+    //     },
+    // },
+
+});
