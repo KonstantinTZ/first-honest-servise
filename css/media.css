@@ -1,3 +1,65 @@
+@media (max-width:1600px) {
+    /* post */
+
+    .post__title {
+        max-width: 100%;
+        margin-bottom: 23px;
+    }
+
+    .post__list p {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .post__img {
+        margin-bottom: 0;
+    }
+
+    .post__img img {
+        margin-bottom: 0;
+    }
+
+
+    .post__list {
+        max-height: inherit;
+        flex-wrap: nowrap;
+    }
+
+    .post__list li:nth-child(1) {
+        order: 1;
+        margin-bottom: 24px;
+    }
+
+    .post__list li:nth-child(2) {
+        order: 3;
+        margin-bottom: 3px;
+    }
+
+    .post__list li:nth-child(3) {
+        order: 5;
+        margin-bottom: 30px;
+    }
+
+    .post__list li:nth-child(4) {
+        order: 6;
+        margin-bottom: 25px;
+    }
+
+    .post__list li:nth-child(5) {
+        order: 2;
+        margin-bottom: 21px;
+    }
+
+    .post__list li:nth-child(6) {
+        order: 4;
+        margin-bottom: 21px;
+    }
+
+    .post__list li:nth-child(7) {
+        order: 7;
+    }
+}
+
 @media (max-width:992px) {
 
     .container {
@@ -210,13 +272,35 @@
         order: 4;
     }
 
+    /* post */
+
+    .post {
+        padding-top: 65px;
+    }
+
+    .post__content {
+        max-width: 785px;
+        padding: 35px 23px;
+    }
+
+    .post__list p {
+        max-width: 726px;
+
+    }
+
+    .post__info {
+        background-image: url('../img/post-background-img-834.jpeg');
+        max-width: 100%;
+    }
+
+
+
 }
 
 
 @media (max-width:768px) {
 
     .container {
-
         padding: 0 12px;
     }
 
@@ -277,7 +361,7 @@
 
     /* hero */
 
-    .hero__list{
+    .hero__list {
         gap: 16px;
     }
 
@@ -304,93 +388,16 @@
     .hero__item:nth-child(3) {
         order: 3;
     }
-
-
-
-    /* hero
-
-    .hero {
-        padding-top: 20px;
-    }
-
-    .hero__container {
-        gap: 22px;
-    }
-
-    .hero-swiper {
-        width: 100%;
-        height: 610px;
-    }
-
-    .hero-slide__container {
-        background-image: url('../img/hero-swipper-img-375.jpeg');
-        padding: 36px 24px;
-    }
-
-
-
-    .hero-slide__title {
-        font-family: Unbounded;
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 39.68px;
-        text-align: left;
-        margin-bottom: 41px;
-
-    }
-
-    .swiper-horizontal>.swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
-        bottom: var(--swiper-pagination-bottom, 31px);
-
-
-    }
-
-
-
-
-
-
-    .hero__list{
-        gap: 16px;
-    }
-
-    .hero__item {
-        width: 351px;
-        height: 98px;
-        padding-right: 15px;
-    }
-
-    .advantages-list__descr {
-        font-family: Unbounded;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 19.84px;
-        text-align: left;
-
-    }
-
-
-    .hero__item:nth-child(2) {
-        order: 2;
-    }
-
-    .hero__item:nth-child(3) {
-        order: 3;
-    } */
-
-
 
 
 }
 
 @media (max-width:480px) {
-        /* hero  */
+    /* hero  */
 
     .hero {
         padding-top: 20px;
+        padding-bottom: 32px;
     }
 
     .hero__container {
@@ -404,7 +411,7 @@
 
     .hero-slide__container {
         background-image: url('../img/hero-swipper-img-375.jpeg');
-        background-size:cover;
+        background-size: cover;
         padding: 36px 24px;
     }
 
@@ -428,4 +435,40 @@
 
 
     }
+
+    /* post */
+
+    .post{
+        padding-top: 33px;
+    }
+
+    .post__content{
+        padding: 29px 23px;
+    }
+
+    .post__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39.68px;
+        text-align: left;
+
+    }
+
+    .post__list p {
+        max-width: 303px;
+        line-height: 29px;
+    }
+
+    .post__list li:nth-child(2) {
+        order: 3;
+        margin-bottom: 22px;
+    }
+
+    .post__list li:nth-child(6) {
+        order: 4;
+        margin-bottom: 17px;
+    }
+
+    
 }
