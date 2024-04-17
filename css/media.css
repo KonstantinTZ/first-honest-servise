@@ -58,6 +58,25 @@
     .post__list li:nth-child(7) {
         order: 7;
     }
+
+    /* benefits */
+
+    .benefits__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 251px 300px 300px 300px;
+        grid-template-areas:
+            "b1 b1"
+            "b2 b3"
+            "b4 b7"
+            "b5 b6";
+    }
+
+    .benefits__item {
+        background-size: cover;
+        background-position: right bottom;
+    }
 }
 
 @media (max-width:1366px) {
@@ -356,6 +375,11 @@
         width: 382px;
     }
 
+    /* benefits */
+
+    .benefits {
+        padding-top: 121px;
+    }
 
 
 }
@@ -461,6 +485,75 @@
     }
 
 
+/* benefits */
+
+.benefits{
+    padding-top: 62px;
+}
+
+.benefits__list {
+    justify-content: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(320px, 382px);
+    grid-template-rows: 185px 261px 260px 260px 260px 263px 360px;
+    grid-template-areas:
+        "b1"
+        "b2"
+        "b3"
+        "b4"
+        "b5"
+        "b6"
+        "b7";
+
+}
+
+.benefits__title {
+    font-family: Unbounded;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 38.44px;
+    text-align: left;
+    margin-bottom: 16px;
+
+}
+
+.benefits__item--1 .benefit__descr {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+
+
+}
+
+.benefit__title {
+    font-family: Unbounded;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.76px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.benefit__descr {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+
+
+}
+
+.benefits__item--1 {
+    padding: 36px 22px;
+}
+
+
+
+
 }
 
 @media (max-width:577px) {
@@ -547,7 +640,7 @@
 
     }
 
-    .steps__list{
+    .steps__list {
         gap: 28px;
     }
 
@@ -555,17 +648,17 @@
         padding-top: 25px;
         position: relative;
         background-image: url(../img/steps-background.jpeg);
-   
+
         min-height: 321px;
 
     }
 
     .steps__item {
         background-image: url('../img/steps-background-375.jpeg');
- 
+
     }
-    
-    .steps__item--extra{
+
+    .steps__item--extra {
         background-image: url('../img/steps-background-extra-375.jpeg');
     }
 }
