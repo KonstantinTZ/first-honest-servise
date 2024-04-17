@@ -43,23 +43,15 @@ const heroSwiper = new Swiper('.hero-swiper', {
         clickable: true,
     },
     
-
-    // breakpoints: {
-
-    //     768: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 50,
-    //     },
-
-    //     992: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 50,
-    //     },
-
-    //     1920: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 50,
-    //     },
-    // },
-
 });
+
+let hiddenElement = document.getElementById("lastRow");
+let scrollButton = document.getElementById("scrollButton");
+
+function handleButtonClick() {
+  hiddenElement.scrollIntoView({ block: "end", behavior: "smooth" });
+  scrollButton.classList.add('is-hidden');
+
+}
+
+scrollButton.addEventListener("click", handleButtonClick);

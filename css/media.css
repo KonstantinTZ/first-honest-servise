@@ -60,6 +60,59 @@
     }
 }
 
+@media (max-width:1366px) {
+
+    /* post */
+    .post {
+        padding-bottom: 28px;
+    }
+
+    /* repair-table */
+    .repair-table__content {
+
+        flex-direction: column;
+        height: 960px;
+    }
+
+    .repair-table__button-block {
+        width: 100%;
+        padding: 49px 26px;
+        padding-bottom: 0;
+    }
+
+    .repair-table__title {
+        margin-bottom: 21px;
+    }
+
+    .repair-table__price-list {
+        width: 100%;
+    }
+
+    .repair-table__big-button {
+        margin-bottom: 44px;
+    }
+
+    .price-list__title {
+        padding: 37px 14px 21px 26px;
+
+    }
+
+    .price-list__text {
+        min-width: 469px;
+        margin-right: auto;
+    }
+
+    .price-list__row {
+        padding-left: 26px;
+        padding-right: 24px;
+    }
+
+    .repair-table__scroll-link {
+        bottom: 428px;
+        right: 50%;
+    }
+}
+
 @media (max-width:992px) {
 
     .container {
@@ -389,7 +442,85 @@
         order: 3;
     }
 
+    /* repair-table */
 
+    .price-list__text {
+        padding-right: 10px;
+        min-width: 250px;
+        max-width: fit-content
+    }
+
+
+}
+
+@media (max-width:577px) {
+
+    /* post */
+
+    .post {
+        padding-bottom: 20px;
+    }
+
+    /* repair-table */
+
+    .repair-table__content {
+        height: 1117px;
+    }
+
+    .repair-table__button-block {
+        width: 100%;
+        padding: 36px 23px;
+        padding-bottom: 0;
+    }
+
+    .repair-table__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39.68px;
+        text-align: left;
+
+    }
+
+    .repair-table__big-button {
+
+        padding: 16px 23px;
+        margin-bottom: 35px;
+    }
+
+    .price-list__item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .price-list__title {
+        padding: 26px 17px 13px 24px;
+        font-family: Unbounded;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22.32px;
+        text-align: left;
+
+    }
+
+    .price-list__row{
+        padding: 15px 24px 16px 24px;
+    }
+
+    .price-list__text{
+        margin-bottom: 6px;
+    }
+
+    
+    .price-list__ptice {
+        margin-bottom: 10px;
+    }
+
+    .repair-table__scroll-link {
+        bottom: 717px;
+        right: 24%;
+    }
 }
 
 @media (max-width:480px) {
@@ -438,11 +569,11 @@
 
     /* post */
 
-    .post{
+    .post {
         padding-top: 33px;
     }
 
-    .post__content{
+    .post__content {
         padding: 29px 23px;
     }
 
@@ -470,5 +601,5 @@
         margin-bottom: 17px;
     }
 
-    
+
 }
