@@ -346,6 +346,16 @@
         max-width: 100%;
     }
 
+    /* steps */
+
+    .steps {
+        padding-top: 124px;
+    }
+
+    .steps__item {
+        width: 382px;
+    }
+
 
 
 }
@@ -504,15 +514,15 @@
 
     }
 
-    .price-list__row{
+    .price-list__row {
         padding: 15px 24px 16px 24px;
     }
 
-    .price-list__text{
+    .price-list__text {
         margin-bottom: 6px;
     }
 
-    
+
     .price-list__ptice {
         margin-bottom: 10px;
     }
@@ -520,6 +530,43 @@
     .repair-table__scroll-link {
         bottom: 717px;
         right: 24%;
+    }
+
+    /* steps */
+
+    .steps {
+        padding-top: 67px;
+    }
+
+    .steps__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39.68px;
+        text-align: left;
+
+    }
+
+    .steps__list{
+        gap: 28px;
+    }
+
+    .steps__item {
+        padding-top: 25px;
+        position: relative;
+        background-image: url(../img/steps-background.jpeg);
+   
+        min-height: 321px;
+
+    }
+
+    .steps__item {
+        background-image: url('../img/steps-background-375.jpeg');
+ 
+    }
+    
+    .steps__item--extra{
+        background-image: url('../img/steps-background-extra-375.jpeg');
     }
 }
 
