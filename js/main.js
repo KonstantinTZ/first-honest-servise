@@ -42,16 +42,55 @@ const heroSwiper = new Swiper('.hero-swiper', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    
+
 });
 
 let hiddenElement = document.getElementById("lastRow");
 let scrollButton = document.getElementById("scrollButton");
 
 function handleButtonClick() {
-  hiddenElement.scrollIntoView({ block: "end", behavior: "smooth" });
-  scrollButton.classList.add('is-hidden');
+    hiddenElement.scrollIntoView({ block: "end", behavior: "smooth" });
+    scrollButton.classList.add('is-hidden');
 
 }
 
 scrollButton.addEventListener("click", handleButtonClick);
+
+const feedbacksSwiper = new Swiper('.feedbacks-swiper', {
+
+    // Default parameters
+    slidesPerView: 4,
+    spaceBetween: 19,
+
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.feedbacks-button-prev',
+        prevEl: '.feedbacks-button-next',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 19
+          },
+        // when window width is >= 320px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 19
+          },
+        // when window width is >= 480px
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 19
+        },
+        // when window width is >= 640px
+        1600: {
+          slidesPerView: 4,
+          spaceBetween: 19
+        },
+      }
+});

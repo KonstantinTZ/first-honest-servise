@@ -381,6 +381,16 @@
         padding-top: 121px;
     }
 
+    /* feedbacks */
+
+    .feedbacks {
+        padding-top: 122px;
+    }
+
+    .feedbacks-button-next,
+    .feedbacks-button-prev {
+        display: none;
+    }
 
 }
 
@@ -485,72 +495,98 @@
     }
 
 
-/* benefits */
+    /* benefits */
 
-.benefits{
-    padding-top: 62px;
-}
+    .benefits {
+        padding-top: 62px;
+    }
 
-.benefits__list {
-    justify-content: center;
-    display: grid;
-    gap: 16px;
-    grid-template-columns: minmax(320px, 382px);
-    grid-template-rows: 185px 261px 260px 260px 260px 263px 360px;
-    grid-template-areas:
-        "b1"
-        "b2"
-        "b3"
-        "b4"
-        "b5"
-        "b6"
-        "b7";
+    .benefits__list {
+        justify-content: center;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: minmax(320px, 382px);
+        grid-template-rows: 185px 261px 260px 260px 260px 263px 360px;
+        grid-template-areas:
+            "b1"
+            "b2"
+            "b3"
+            "b4"
+            "b5"
+            "b6"
+            "b7";
 
-}
+    }
 
-.benefits__title {
-    font-family: Unbounded;
-    font-size: 31px;
-    font-weight: 600;
-    line-height: 38.44px;
-    text-align: left;
-    margin-bottom: 16px;
+    .benefits__title {
+        font-family: Unbounded;
+        font-size: 31px;
+        font-weight: 600;
+        line-height: 38.44px;
+        text-align: left;
+        margin-bottom: 16px;
 
-}
+    }
 
-.benefits__item--1 .benefit__descr {
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28.8px;
-    text-align: left;
-
-
-}
-
-.benefit__title {
-    font-family: Unbounded;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29.76px;
-    text-align: left;
-    margin-bottom: 12px;
-}
-
-.benefit__descr {
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25.2px;
-    text-align: left;
+    .benefits__item--1 .benefit__descr {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        text-align: left;
 
 
-}
+    }
 
-.benefits__item--1 {
-    padding: 36px 22px;
-}
+    .benefit__title {
+        font-family: Unbounded;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29.76px;
+        text-align: left;
+        margin-bottom: 12px;
+    }
 
+    .benefit__descr {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.2px;
+        text-align: left;
+
+
+    }
+
+    .benefits__item--1 {
+        padding: 36px 22px;
+    }
+
+    /* feedbacks */
+
+    .feedbacks {
+        padding-top: 68px;
+    }
+
+    .feedbacks__title {
+        font-family: Unbounded;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39.68px;
+        text-align: left;
+    }
+
+    .feedbacks-swiper__button-box {
+        display: block;
+        width: 94%;
+        top: 484px;
+        right: inherit;
+        bottom: inherit;
+        left: inherit;
+    }
+
+    .feedbacks__leave-comment{
+        width: 100%;
+    }
 
 
 
